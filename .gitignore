@@ -1,0 +1,23 @@
+# Ignore environment files
+.env
+brt-frontend/.env
+
+# Ignore Laravel vendor & storage
+/vendor
+/node_modules
+/storage
+/public/storage
+/bootstrap/cache
+
+# Ignore React dependencies
+brt-frontend/node_modules
+
+# Ignore IDE/editor-specific files
+.vscode
+.idea
+.DS_Store
+
+#ignore lock files
+composer.lock
+package-lock.json 
+brt-frontend/package-lock.json
