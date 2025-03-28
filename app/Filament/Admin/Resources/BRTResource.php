@@ -9,7 +9,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use App\Filament\Widgets\BRTStats;
 use Illuminate\Database\Eloquent\Builder;
 
 class BRTResource extends Resource
@@ -114,13 +113,6 @@ class BRTResource extends Resource
             'index' => Pages\ListBRTS::route('/'),
             'create' => Pages\CreateBRT::route('/create'),
             'edit' => Pages\EditBRT::route('/{record}/edit'),
-        ];
-    }
-
-    public static function getWidgets(): array
-    {
-        return [
-            BRTStats::class,
         ];
     }
 }

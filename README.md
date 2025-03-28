@@ -7,7 +7,7 @@ This is a full-stack BRT (Blume Reserve Ticket) management system built with **L
 ## 📌 **Project Setup**
 
 ### **1. Clone the Repository**
-```bash
+```
 git clone https://github.com/AkshaySharma97/UNIQCRYPTO-Test-1-brt-management.git
 cd brt-management
 ```
@@ -17,28 +17,28 @@ cd brt-management
 ## **Laravel Backend Setup**
 
 ### **2. Install Dependencies**
-```bash
+```
 composer update
 ```
 
 ### **3. Set Up Environment Variables**
-```bash
+```
 cp .env.example .env
 ```
-Edit the `.env` file and configure the database connection and Pusher credentials.
+ the `.env` file and configure the database connection and Pusher credentials.
 
 ### **4. Generate JWT Secret Key**
-```bash
+```
 php artisan jwt:secret
 ```
 
 ### **5. Run Database Migrations & Seed Data**
-```bash
+```
 php artisan migrate --seed
 ```
 
 ### **6. Start the Laravel Development Server**
-```bash
+```
 php artisan serve
 ```
 The backend will be accessible at `http://127.0.0.1:8000`
@@ -48,20 +48,20 @@ The backend will be accessible at `http://127.0.0.1:8000`
 ## **React Frontend Setup**
 
 ### **7. Install Node.js Dependencies**
-```bash
+```
 cd brt-frontend
 npm install
 ```
 
 ### **8. Set Up Environment Variables**
 Create a `.env` file inside `brt-frontend` and add:
-```bash
+```
 REACT_APP_API_URL_BRT=http://127.0.0.1:8000/api/brts
 REACT_APP_API_URL=http://127.0.0.1:8000/api
 ```
 
 ### **9. Start the React Development Server**
-```bash
+```
 npm run dev
 ```
 The frontend will be accessible at `http://localhost:3000`
@@ -96,3 +96,26 @@ Open http://127.0.0.1:8000/admin in your browser.
 `Login using:`
 - Email: admin@example.com
 - Password: password123
+
+---
+
+### **Running Tests**
+ 1. Run All Tests
+    - php artisan test
+ 2. Run Only Unit Tests
+    - php artisan test --filter=UserTest
+ 3. Run Only Feature Tests
+    - php artisan test --filter=BRTManagementTest
+
+### ** Test Cases**
+    Unit Tests (UserTest.php)
+    - Can create a user.
+    - Can have multiple BRTs.
+    - Can return JWT identifier and custom claims.
+
+    Feature Tests (BRTManagementTest.php)
+    - User can create a BRT.
+    - User can view all BRTs.
+    - User can view a single BRT.
+    - User can update a BRT.
+    - User can delete a BRT.

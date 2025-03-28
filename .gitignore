@@ -1,6 +1,5 @@
 # Ignore environment files
 .env
-brt-frontend/.env
 
 # Ignore Laravel vendor & storage
 /vendor
@@ -8,9 +7,6 @@ brt-frontend/.env
 /storage
 /public/storage
 /bootstrap/cache
-
-# Ignore React dependencies
-brt-frontend/node_modules
 
 # Ignore IDE/editor-specific files
 .vscode
@@ -20,4 +16,3 @@ brt-frontend/node_modules
 #ignore lock files
 composer.lock
 package-lock.json 
-brt-frontend/package-lock.json
